@@ -1,9 +1,9 @@
 package:
   name: slapi
-  version: "0.0.4"
+  version: "0.0.5"
 
 source:
-  git_rev: v0.0.4
+  git_rev: v0.0.5
   git_url: https://github.com/pythonflaskserverapps/slapi.git
 
 requirements:
