@@ -10,6 +10,14 @@ import slapi
 lila2 = slapi.login("username", "password")
 ```
 
+## Send message
+
+```python
+import slapi
+
+lila2 = slapi.sendmessage("recipientusername", "subject", "message", slapi.login("myusername", "password"))
+```
+
 ## Join tourney
 
 ```python
