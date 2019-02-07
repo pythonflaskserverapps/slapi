@@ -1,6 +1,6 @@
-# Lichess shadow API
+# Shadow lichess API
 
-Lichess shadow API.
+Lichess API like functions that are not part of the official API.
 
 ## Login
 

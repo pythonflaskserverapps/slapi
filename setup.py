@@ -2,13 +2,13 @@ from setuptools import setup
 
 
 setup(name='slapi',
-      version='0.0.2',
+      version='0.0.3',
       author='pythonflaskserverapps',
       author_email='pythonflaskserverapps@gmail.com',
-      description='lichess shadow api',
-      long_description='Lichess shadow API.',
+      description='shadow lichess api',
+      long_description='Shadow lichess API.',
       license='MIT',
-      keywords="lichess shadow api",
+      keywords="shadow lichess api",
       url='https://github.com/pythonflaskserverapps/slapi',            
       packages=['slapi'],
       test_suite="travis_test",
@@ -21,7 +21,8 @@ setup(name='slapi',
         "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
         "Programming Language :: Python :: 3",        
-        "Programming Language :: Python :: 3.6"
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7"
       ],
       entry_points={
         'console_scripts': []

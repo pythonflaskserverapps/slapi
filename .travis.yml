@@ -1,7 +1,8 @@
 language: python
 python:  
   - "3.6"
-#  - "pypy3.5"
+  - "3.7"
+  - "pypy3.5"
 # command to install dependencies
 install:
   - pip install pipenv
