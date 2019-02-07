@@ -17,3 +17,11 @@ import slapi
 
 slapi.jointourney("tourneyid", slapi.login("username", "password"))
 ```
+
+## Talk tourney chat
+
+```python
+import slapi
+
+slapi.talktourneychat("tourneyid", slapi.login("username", "password"), "message")
+```
