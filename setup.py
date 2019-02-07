@@ -2,7 +2,7 @@ from setuptools import setup
 from slapi import read_string_from_file
 
 setup(name='slapi',
-      version='0.0.5',
+      version='0.0.6',
       author='pythonflaskserverapps',
       author_email='pythonflaskserverapps@gmail.com',
       description='shadow lichess api',

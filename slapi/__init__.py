@@ -12,8 +12,6 @@ import random, string, json
 import threading, time
 from http.client import responses
 
-from os import environ
-
 #########################################################
 
 http = urllib3.PoolManager(
@@ -28,28 +26,12 @@ def posturlbody(url, headers = {}, body = ""):
     content = r.data.decode("utf-8")
     return content
 
-def write_string_to_file(path, content, verbose = False):
-    with open(path,"w") as outfile:
-        outfile.write(content)
-    if verbose:
-        print(f"written file { path } ( { len(str) } characters )")
-
 def read_string_from_file(path, default):
 	try:
 		content = open(path).read()
 		return content
 	except:
 		return default
-
-def write_json_to_file(path, obj, indent = 2):    
-    json.dump(obj, open(path, "w"), indent = indent)
-    
-def read_json_from_file(path, default):
-    try:
-        obj = json.load(open(path))
-        return obj
-    except:
-        return default
 
 #########################################################
 
@@ -138,7 +120,7 @@ def sendmessage(username, subject, message, lila2):
 
     try:
         res = http.request("POST", url, headers = {
-            "cookie": "lila2={}".format(lila2)
+            "Cookie": "lila2={}".format(lila2)
         }, fields = {
             "subject": subject,
             "text": message
@@ -148,9 +130,7 @@ def sendmessage(username, subject, message, lila2):
 
         try:
             #content = res.data.decode("utf-8")
-            content = "{}".format(res.data)
-            write_string_to_file("outbox/sendmessagecontent.txt", content)
-            write_string_to_file("outbox/sendmessagecontent.html", content)
+            content = "{}".format(res.data)            
             if '<p class="error">' in content:
                 print("message declined")
                 return MESSAGE_RESULT.MESSAGE_DECLINED
