@@ -1,12 +1,13 @@
 from setuptools import setup
-
+from slapi import read_string_from_file
 
 setup(name='slapi',
-      version='0.0.3',
+      version='0.0.4',
       author='pythonflaskserverapps',
       author_email='pythonflaskserverapps@gmail.com',
       description='shadow lichess api',
-      long_description='Shadow lichess API.',
+      long_description=read_string_from_file("README.md", "Shadow lichess API."),
+      long_description_content_type='text/markdown',
       license='MIT',
       keywords="shadow lichess api",
       url='https://github.com/pythonflaskserverapps/slapi',            
