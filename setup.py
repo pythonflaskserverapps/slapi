@@ -15,7 +15,7 @@ setup(name='slapi',
       test_suite="travis_test",
       python_requires=">=3.6",
       install_requires=[        
-        "urllib3[secure]==1.24.1",        
+        "urllib3[secure]==1.24.2",        
         "websocket-client==0.54.0"
       ],
       classifiers=[
